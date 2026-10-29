@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu Nome | Vitrine Dev</title>
+    <!-- Fontes e Estilos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho Fixo com Glassmorphism -->
+    <header id="cabecalho" class="header-glass">
+        <div class="container header-container">
+            <a href="#inicio" class="logo">&lt;<span>Dev</span>Vitrine&gt;</a>
+            
+            <button id="btn-menu" class="btn-menu" aria-label="Abrir menu de navegação" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
+            <nav id="menu" class="menu">
+                <ul>
+                    <li><a href="#inicio" class="nav-link">Início</a></li>
+                    <li><a href="#sobre" class="nav-link">Sobre mim</a></li>
+                    <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+                    <li><a href="#projetos" class="nav-link">Projetos</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+
+            <button id="btn-tema" class="btn-tema" aria-label="Alternar modo claro e escuro">
+                🌙
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Início (Hero) com suporte a Foto Real -->
+        <section id="inicio" class="hero">
+            <div class="container hero-content">
+                <div class="hero-texto">
+                    <div id="saudacao-badge" class="saudacao-badge">
+                        <span class="pulse-dot"></span>
+                        <span id="saudacao-texto">Carregando saudação...</span>
+                    </div>
+                    <h1>Olá, eu sou o <span class="destaque">Kaio Alexandre</span></h1>
+                    <p class="hero-sub">Estudante de Técnico em Desenvolvimento de Sistemas no <strong>SENAC MedTec</strong>. Focado em criar experiências web limpas, responsivas e de alta performance.</p>
+                    <div class="hero-acoes">
+                        <a href="#projetos" class="btn-primario">Explorar Projetos</a>
+                        <a href="#contato" class="btn-secundario">Fale Comigo</a>
+                    </div>
+                </div>
+
+                <div class="hero-avatar-wrapper">
+                    <div class="avatar-container">
+                        <!-- 
+                          COMO COLOCAR SUA FOTO:
+                          1. Coloque sua imagem na pasta `img/` (ex: `img/sua-foto.jpg`).
+                          2. Altere o atributo `src` abaixo para `img/sua-foto.jpg`.
+                          3. Se preferir usar iniciais, deixe a tag <img> comentada ou remova e use a div avatar-fallback.
+                        -->
+                        <img src="WhatsApp Image 2026-10-28 at 11.59.05.jpeg" alt="Foto de perfil de Seu Nome" id="foto-perfil" class="foto-perfil" onerror="tratarErroFoto(this)">
+                        <div id="avatar-fallback" class="avatar-fallback hidden">SN</div>
+                    </div>
+                    <div class="badge-tech-float">⚡ Front-end Dev</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre Mim -->
+        <section id="sobre" class="container secao">
+            <div class="secao-header">
+                <h2>Sobre mim</h2>
+                <span class="sub-titulo">Quem sou e quais são meus objetivos</span>
+            </div>
+            <div class="sobre-grid">
+                <div class="sobre-card-texto">
+                    <p>Minha jornada na tecnologia começou no SENAC MedTec, onde aprendi a transformar lógica em interfaces visuais. Acredito que o desenvolvimento front-end está na intersecção perfeita entre a engenharia de código precisa e o design centrado no usuário.</p>
+                    <p>Atualmente, estou consolidando pilares fundamentais como arquitetura semântica HTML5, estilização moderna com CSS Grid/Flexbox e programação assíncrona em JavaScript vanilla, visando criar aplicações acessíveis e eficientes.</p>
+                </div>
+                <div class="sobre-stats">
+                    <div class="stat-item">
+                        <span class="stat-numero">15+</span>
+                        <span class="stat-label">Projetos Acadêmicos</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-numero">100%</span>
+                        <span class="stat-label">Dedicação Front-end</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Habilidades -->
+        <section id="habilidades" class="container secao">
+            <h2>Habilidades & Tecnologias</h2>
+            <div class="skills-grid">
+                <article class="skill-card">
+                    <div class="skill-icon">🌐</div>
+                    <h3>HTML5 Semântico</h3>
+                    <span class="nivel confortável">Confortável</span>
+                </article>
+                <article class="skill-card">
+                    <div class="skill-icon">🎨</div>
+                    <h3>CSS3 & Layouts (Grid/Flex)</h3>
+                    <span class="nivel praticando">Praticando</span>
+                </article>
+                <article class="skill-card">
+                    <div class="skill-icon">⚡</div>
+                    <h3>JavaScript (ES6+)</h3>
+                    <span class="nivel praticando">Praticando</span>
+                </article>
+                <article class="skill-card">
+                    <div class="skill-icon">🛠️</div>
+                    <h3>Git & GitHub</h3>
+                    <span class="nivel confortável">Confortável</span>
+                </article>
+            </div>
+        </section>
+
+        <!-- Projetos -->
+        <section id="projetos" class="container secao">
+            <h2>Projetos em Destaque</h2>
+            <div class="filtros-container" role="toolbar" aria-label="Filtros de projetos">
+                <button class="btn-filtro ativo" data-filtro="todos">Todos</button>
+                <button class="btn-filtro" data-filtro="HTML/CSS">HTML / CSS</button>
+                <button class="btn-filtro" data-filtro="JavaScript">JavaScript</button>
+            </div>
+            <div id="grid-projetos" class="projetos-grid">
+                <!-- Gerado dinamicamente via JS (Array de objetos + forEach) -->
+            </div>
+        </section>
+
+        <!-- Contato -->
+        <section id="contato" class="container secao">
+            <h2>Vamos Conversar?</h2>
+            <p class="contato-sub">Preencha o formulário abaixo ou acesse minhas redes profissionais.</p>
+            
+            <form id="form-contato" novalidate>
+                <div class="form-grupo">
+                    <label for="nome">Seu Nome</label>
+                    <input type="text" id="nome" name="nome" placeholder="Ex: Maria Souza" required>
+                    <span class="erro-msg" id-erro="nome"></span>
+                </div>
+
+                <div class="form-grupo">
+                    <label for="email">Seu E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com" required>
+                    <span class="erro-msg" id-erro="email"></span>
+                </div>
+
+                <div class="form-grupo">
+                    <label for="mensagem">Mensagem <small>(Mínimo de 20 caracteres)</small></label>
+                    <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea>
+                    <span class="erro-msg" id-erro="mensagem"></span>
+                </div>
+
+                <div class="form-grupo checkbox-grupo">
+                    <input type="checkbox" id="consentimento" name="consentimento" required>
+                    <label for="consentimento">Concordo com o armazenamento temporário dos meus dados estritamente para fins de contato profissional (LGPD).</label>
+                    <span class="erro-msg" id-erro="consentimento"></span>
+                </div>
+
+                <button type="submit" class="btn-primario btn-full">Enviar Mensagem</button>
+                <div id="sucesso-msg" class="sucesso-msg hidden" role="alert">✨ Mensagem enviada com sucesso! Em breve entrarei em contato.</div>
+            </form>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer id="rodape">
+        <div class="container rodape-content">
+            <div class="rodape-info">
+                <p>&copy; <span id="ano-atual"></span> Seu Nome. Desenvolvido no SENAC MedTec.</p>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+            
+            </div>
+            <button id="btn-topo" class="btn-topo hidden" aria-label="Voltar ao topo">↑</button>
+        </div>
+    </footer>
+
+    <!-- Script modularizado com defer -->
+    <script src="script.js" defer></script>
+</body>
+</html>
